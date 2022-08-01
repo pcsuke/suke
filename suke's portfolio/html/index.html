@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>suke's portfolio</title>
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <!--フォント導入-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="/js/luxy.js" charset="utf-8"></script>
+    <script charset="utf-8"></script>
+</head>
+
+<body>
+    <div data-scrol>
+        <header>
+            <div class="back" onclick="location.href='#'"></div>
+            <p class="contact" onclick="location.href='mailto:sukepc0824&#64;gmail.com'">Contact</p>
+        </header>
+
+        <div class="main" id="luxy">
+            <div class="top luxy-el" data-speed-y="30" data-offset="0" data-horizontal='0' data-speed-x="0">
+                <div class="title">
+                    <p class="main_text">SUKE's Portfolio</p>
+                    <p class="sub_title">Here is my profile and design.</p>
+                </div>
+            </div>
+            <div class="jump">
+                <div class="swiper luxy-el" data-speed-y="0" data-offset="0" data-horizontal='1' data-speed-x="0">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" onclick="location.href='/html/profile.html'">
+                            <!-- スライド -->
+                            <div class="swiper-slide">PROFILE</div>
+                            <div class="swiper-slide">PROFILE</div>
+                            <div class="swiper-slide">PROFILE</div>
+                        </div>
+                    </div>
+                    <!-- 必要に応じたwrapper -->
+                </div>
+                <img src="/img/suke_background.png" class="suke_background">
+            </div>
+            <div class="portfolio_background luxy-el" data-speed-y="-2" data-offset="0" data-horizontal='0'
+                data-speed-x="0">
+                <div class="portfolio">
+                    <div id="portfolio"></div>
+                    <div class="left_content">
+                        <p>Portfolio</p>
+                        <div class="portfolio_content">
+                            <h1>● REALIZE-ホームページ</h1>
+                            <h2>クリエイターグループREALIZEのホームページの<br>メインデザインを担当しました。</h2>
+                            <div class="pre_img">
+                                <img src="/img/realize.png" onclick="location.href='realize-creator.studio.site'">
+                                <h3>realize-creator.studio.site</h3>
+                            </div>
+                        </div>
+                        <div class="portfolio_content">
+                            <h1>● Youtube</h1>
+                            <h2>YouTubeで商品レビュー動画を作成しています。
+                                企業とのタイアップで受注して動画を作成したこともあります。</h2>
+                            <div class="pre_img">
+                                <img src="/img/youtube.png" onclick="location.href='realize-creator.studio.site'">
+                                <h3>youtube.com/スケsuke</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right_content">
+                        <div class="portfolio_content">
+                            <h1>● Latest mi_dev</h1>
+                            <h2>えぬあろね（@Iam_nalone）さん制作のOSもどき，
+                                「Latest mi」のダウンロードページ。決められたUIの中でのレイアウトを工夫しました。</h2>
+                            <div class="pre_img">
+                                <img src="/img/latest.png" onclick="location.href='realize-creator.studio.site'">
+                                <h3>まだ公開されていません</h3>
+                            </div>
+                        </div>
+                        <div class="portfolio_content">
+                            <h1>● VIDEO Compotion</h1>
+                            <h2>チャンネル上での映像合作を主催しました。
+                                またやろうかな。</h2>
+                            <div class="pre_img">
+                                <img src="/img/video.png" onclick="location.href='realize-creator.studio.site'">
+                                <h3>youtu.be/R8Sf-DupCGk</h3>
+                            </div>
+                        </div>
+                        <div class="button" onclick="window.location.href='mailto:sukepc0824&#64;gmail.com'"
+                            target="_blank">
+                            <p>依頼する</p><img src="/img/arrow.svg"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="top">
+                    <h1 class="luxy-el" data-speed-y="0" data-offset="0" data-horizontal='1' data-speed-x="0"></h1>
+                </div>
+                <div class="sitemap">
+                    <h2 onclick="window.location.href='#'">Top</h2>
+                    <h2 onclick="window.location.href='/html/profile.html'">Profile</h2>
+                    <h2 onclick="window.location.href='#'">Portfolio<h2>
+                            <h2 onclick="window.location.href='mailto:sukepc0824&#64;gmail.com'" target="_blank">Contact
+                            </h2>
+                </div>
+                <p>このサイトは私のWEBデザインの勉強のためだけに作ったものです。そのため全くUXへの配慮がありません。許して。<br>&copy;2022 SUKE </p>
+            </footer>
+        </div>
+    </div>
+    <script>const swiper = new Swiper(".swiper-container", {
+            loop: true, // ループ有効
+            slidesPerView: 2.05, // 一度に表示する枚数
+            speed: 9000, // ループの時間
+            allowTouchMove: false, // スワイプ無効
+            autoplay: {
+                delay: 0, // 途切れなくループ
+            },
+        });
+    </script>
+    <script>
+        luxy.init({
+            wrapper: '#luxy', //慣性スクロールを包括する要素のID
+            wrapperSpeed: 0.07 //スクロールスピード
+        });
+    </script>
+</body>
+
+</html>
